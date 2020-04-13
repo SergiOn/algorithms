@@ -1,5 +1,3 @@
-# Algorithms
-
 ## LeetCode
 
 https://leetcode.com
