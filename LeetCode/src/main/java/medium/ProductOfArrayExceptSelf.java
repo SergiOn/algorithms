@@ -1,4 +1,4 @@
-package medium.ProductOfArrayExceptSelf;
+package medium;
 
 /**
  * 238. Product of Array Except Self
