@@ -1,6 +1,7 @@
 package hard;
 
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import static org.hamcrest.MatcherAssert.assertThat;
@@ -50,6 +51,19 @@ class MinimumDistanceToTypeWordUsingTwoFingersTest {
     void test6() {
         int actual = sut.minimumDistance("QIBZR");
         assertThat(actual, is(7));
+    }
+
+    @Test
+    void test7() {
+        int actual = sut.minimumDistance("XM");
+        assertThat(actual, is(0));
+    }
+
+    @Test
+    @Disabled
+    void test8() {
+        int actual = sut.minimumDistance("OPVUWZLCKTDPSUKGHAXIDWHLZFKNBDZEWHBSURTVCADUGTSDMCLDBTAGFWDPGXZBVARNTDICHCUJLNFBQOBTDWMGILXPSFWVGYBZVFFKQIDTOVFAPVNSQJULMVIERWAOXCKXBRI");
+        assertThat(actual, is(0));
     }
 
 }
