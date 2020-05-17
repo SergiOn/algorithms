@@ -1,4 +1,4 @@
-package hard;
+package hard.MinimumDistanceToTypeWordUsingTwoFingers;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Disabled;
@@ -6,15 +6,14 @@ import org.junit.jupiter.api.Test;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
-import static org.junit.jupiter.api.Assertions.*;
 
-class MinimumDistanceToTypeWordUsingTwoFingersTest {
+class MinimumDistanceToTypeWordUsingTwoFingersTest2 {
 
-    private MinimumDistanceToTypeWordUsingTwoFingers sut;
+    private MinimumDistanceToTypeWordUsingTwoFingers2 sut;
 
     @BeforeEach
     void setUp() {
-        sut = new MinimumDistanceToTypeWordUsingTwoFingers();
+        sut = new MinimumDistanceToTypeWordUsingTwoFingers2();
     }
 
     @Test

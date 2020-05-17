@@ -1,4 +1,4 @@
-package hard;
+package hard.MinimumDistanceToTypeWordUsingTwoFingers;
 
 /**
  * 1320. Minimum Distance to Type a Word Using Two Fingers
@@ -59,92 +59,6 @@ public class MinimumDistanceToTypeWordUsingTwoFingers {
     public int minimumDistance(String word) {
         final char[] chars = word.toCharArray();
         final int length = chars.length;
-        int distance = 0;
-
-        for (int i = 1; i < length; i++) {
-            int d = calculateMinimumDistance(chars, length, 0, i);
-
-            if (distance == 0) {
-                distance = d;
-            } else if (d != 0 && d < distance) {
-                distance = d;
-            }
-        }
-
-        return distance;
-    }
-
-    private int calculateMinimumDistance(final char[] chars, final int length, final int firstFinger, final int secondFinger) {
-        int nextFinger = Math.min(firstFinger, secondFinger) + 1;
-
-        while (nextFinger == firstFinger || nextFinger == secondFinger) {
-            nextFinger += 1;
-        }
-
-        if (nextFinger >= length) {
-            return 0;
-        }
-
-        final int diff1 = calculateRecursionDistance(0, chars, length, firstFinger, secondFinger, nextFinger);
-        final int diff2 = calculateRecursionDistance(0, chars, length, secondFinger, firstFinger, nextFinger);
-        return Math.min(diff1, diff2);
-    }
-
-    private int calculateRecursionDistance(int distance, char[] chars, int length, int finger1, int finger2, int nextFinger1) {
-        final int dist = distance + distanceBetweenChars(chars[finger1], chars[nextFinger1]);
-        int newNextFinger = nextFinger1 + 1;
-
-        while (newNextFinger == finger1 || newNextFinger == finger2) {
-            newNextFinger += 1;
-        }
-
-        if (newNextFinger >= length) {
-            return dist;
-        }
-
-        final int diff1 = calculateRecursionDistance(dist, chars, length, nextFinger1, finger2, newNextFinger);
-        final int diff2 = calculateRecursionDistance(dist, chars, length, finger2, nextFinger1, newNextFinger);
-        return Math.min(diff1, diff2);
-    }
-
-    private int distanceBetweenChars(char left, char right) {
-        final int charANumber = 65;
-        final int leftNumber = (int) left - charANumber;
-        final int rightNumber = (int) right - charANumber;
-
-        final int verticalLeft = leftNumber / 6;
-        final int horizontalLeft = leftNumber - verticalLeft * 6;
-        final int verticalRight = rightNumber / 6;
-        final int horizontalRight = rightNumber - verticalRight * 6;
-
-        return Math.abs(verticalLeft - verticalRight) + Math.abs(horizontalLeft - horizontalRight);
-    }
-
-    // CAKE
-
-    // C | A
-    // C -> K | A
-    // K -> E | A
-    // 3 + 1
-
-    // C | A
-    // C -> K | A
-    // A -> E | K
-    // 3 + 4
-
-    // C | A
-    // A -> K | C
-    // K -> E | C
-    // 5 + 1
-
-    // C | A
-    // A -> K | C
-    // C -> E | K
-    // 5 + 2
-
-    public int minimumDistance2(String word) {
-        final char[] chars = word.toCharArray();
-        final int length = chars.length;
 
         int firstFingerIndex = 0;
         int secondFingerIndex = length - 2;
@@ -200,6 +114,19 @@ public class MinimumDistanceToTypeWordUsingTwoFingers {
         }
 
         return road;
+    }
+
+    private int distanceBetweenChars(char left, char right) {
+        final int charANumber = 65;
+        final int leftNumber = (int) left - charANumber;
+        final int rightNumber = (int) right - charANumber;
+
+        final int verticalLeft = leftNumber / 6;
+        final int horizontalLeft = leftNumber - verticalLeft * 6;
+        final int verticalRight = rightNumber / 6;
+        final int horizontalRight = rightNumber - verticalRight * 6;
+
+        return Math.abs(verticalLeft - verticalRight) + Math.abs(horizontalLeft - horizontalRight);
     }
 
 }
