@@ -10,22 +10,23 @@ Level up your coding skills and quickly land a job. This is the best place to ex
 
 http://hamcrest.org/JavaHamcrest/tutorial
 
-### Algorithms
+#### Additional questions
 
-#### 4. Median of Two Sorted Arrays
+https://leetcode.com/discuss/interview-question?currentPage=1&orderBy=hot&query=
 
-https://leetcode.com/problems/median-of-two-sorted-arrays
+https://leetcode.com/discuss/interview-question/436073
 
-Runtime: 2 ms, faster than 99.81% of Java online submissions for Median of Two Sorted Arrays.
+### Interviews
 
-Memory Usage: 40.7 MB, less than 100.00% of Java online submissions for Median of Two Sorted Arrays.
+https://leetcode.com/discuss/interview-experience?currentPage=1&orderBy=hot&query=
 
-#### 65. Valid Number
+https://leetcode.com/discuss/interview-experience/634136/facebook-e3e4-may-2020-pending
 
-https://leetcode.com/problems/valid-number
+https://leetcode.com/discuss/interview-experience/639684/nda-facebook-e4-london-april-2020-offer
 
-Runtime: 2 ms, faster than 91.58% of Java online submissions for Valid Number.
+https://leetcode.com/discuss/interview-experience/637486/amazon-sde1-hyderabad-april-2020-offer
 
-Memory Usage: 39.3 MB, less than 6.25% of Java online submissions for Valid Number.
+https://leetcode.com/discuss/interview-experience/638214/amazon-sde2-google-l4-facebook-e4-offer-offer-offer-april-2020
 
+https://leetcode.com/discuss/interview-experience/637356/amazon-apple-facebook-l5-ict4-e5-seattle-april-2020-may-2020-offer-offer-offer
 
